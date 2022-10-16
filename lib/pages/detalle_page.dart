@@ -122,7 +122,7 @@ class _DetallePageState extends State<DetallePage> {
                     Row(
                       children: [
                         const Text(
-                          'Precio:',
+                          'Precio: ',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 30),
                         ),
@@ -184,6 +184,28 @@ class _DetallePageState extends State<DetallePage> {
                             height: 30,
                           ),
                         ],
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.only(top: 15),
+                      padding: const EdgeInsets.all(20),
+                      height: 60,
+                      width: 180,
+                      decoration: BoxDecoration(
+                          boxShadow: const [
+                            BoxShadow(
+                                blurRadius: 6,
+                                color: Colors.blue,
+                                offset: Offset(0.0, 1.0))
+                          ],
+                          color: Colors.grey[700],
+                          borderRadius: const BorderRadius.only(
+                              bottomLeft: Radius.circular(25),
+                              topRight: Radius.circular(75))),
+                      child: Text(
+                        'Total: $_total',
+                        style: const TextStyle(
+                            fontSize: 21, fontWeight: FontWeight.bold),
                       ),
                     )
                   ],
